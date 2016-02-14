@@ -1,22 +1,68 @@
-<header class="site-header">
+<header class="header">
 
-  <div class="wrapper">
+  <div class="overlay">
 
-    <nav class="site-nav">
+    <div class="container">
 
-      <div class="trigger">
-        <!-- {{ site.title }} instead of blog -->
-        <a class="page-link" href="{{ site.baseurl }}/">blog</a>
+      <h1 class="title">
+        <a href="{{ site.baseurl }}/index.html">{{ site.title }}</a>
+      </h1>
 
-        {% for page in site.pages %}
-          {% if page.title %}
-          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-          {% endif %}
-        {% endfor %}
+      <nav class="navbar">
+        <a href="#" class="menu-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
 
-      </div>
-    </nav>
+        <ul class="nav">
+<!--           {% for page in site.pages %}
+            {% if page.title and page.title != 'Home' %}
+            <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+            {% endif %}
+          {% endfor %} -->
+           <li><a href="/gallery.html">摄影&amp心情</a></li>
+          <li><a href="{{ site.author.url }}" target="_blank">关于我</a></li>
+          <li><a href="{{ site.github }}" target="_blank">Github</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    {% if page.title == 'Home' %}
+      <h2 class="txt-center">
+        知行合一
+      </h2>
+    {% endif %}
+
+    {% if page.title == 'Gallery' %}
+      <h2 class="txt-center">
+        诗和远方
+      </h2>
+      
+      <style>
+        .header {
+            background: #292929 url("../img/2014-05-08 18.01.38.jpg") no-repeat center center;
+            background-size: cover;
+        }
+      </style>
+
+    {% endif %}
 
   </div>
 
 </header>
+
+<!-- <header class="header">
+  
+  <a href="#firstPage" id="signiture"><img src="img/signiture.png"></a>
+  <div id="drop-down">
+    <ul id="nav">
+        <li><a href="https://windsvon.github.io">技术博客</a></li>
+        <li class="current-section"><a href="https://windsvon.github.io/CV">个人简历</a></li>
+        <li><a href="#thirdPage">摄影&amp心情</a></li>
+        <li><a href="https://github.com/windsvon">github</a></li>
+    </ul>
+  </div>
+  <a href="https://github.com/windsvon"><img src="img/github01.png" class="github" alt="github"></a>
+
+</header> -->
