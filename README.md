@@ -1,95 +1,51 @@
-# Abstract
-
-This is my blog based on jekyll. And I change the style and interactive. If you want to use this model of the blog. **Please give a star at this repository**. Then you can clone it as your blog model.
-
-You can visit [here](http://gaohaoyang.github.io) to see this blog.
-
-这是我的博客，基于 jekyll。我改了所有默认的样式和交互。如果你想使用这个博客模板。**请先在这个仓库上点个star吧**，这也是对我的肯定和鼓励，谢谢了。然后你可以克隆这个仓库用作你自己的博客。
-
-博客访问地址：[点击这里](http://gaohaoyang.github.io)
-
-**使用时请注明模板来源:  Jekyll theme by [Gaohaoyang](https://github.com/Gaohaoyang/gaohaoyang.github.io)**
-
-# TodoList
-
-之前忙于找工作，最近忙于个人的毕业论文撰写，很久没有投入这个博客主题的维护了。同时，自己学习前端也整整一年了，对当年写的代码已经不太满意了。列举一下即将做的任务。写完毕业论文后一定重构这个 jekyll 主题！大约在2016年3月开始。大家有什么建议也可以给我 issue，我会记下来的。
-
-I was busy on applying on a job before, and recently I am writing my Graduation Thesis. So it's a long time since I maintained this Jekyll Theme last time. At the same time I have learned Front-end tech for whole one year. I don't satisfy the code I wrote before. There is a todo list below. I will do it after my Graduation Thesis in March 2016. If you have any suggestions, you can open an issue. I'll record them. Thank you! I love the open source world!
- 
-- [ ] remove jQuery & BootStrap, do code reconsitution with Responsive Layout
-- [ ] add tags
-- [ ] modify content style to be fixed on screen
-- [ ] modify some details for better sense of design
-- [ ] add search input
-
-# Update
-
-## 2015/05/25
-
-* Fix bug of footer jumping
-* Add response interactive of demo page
+# *folio
+A simple theme for showcasing your work, emphasis on whitespace, transparency, and helvetica. 
 
 
+<a href="http://liabogoev.com/-folio">Live Demo</a>
 
-# About Theme
-
-This is a blog theme based on jekyll. You can use on your own blog. Before you use it, please click a star on [this respository](https://github.com/Gaohaoyang/gaohaoyang.github.io/). You will encourage me to do more great things!
-
-## Sample
-
-### static view
-
-![blog sample](http://7q5cdt.com1.z0.glb.clouddn.com/blog-blog sample.png)
-
-### active view
-
-![blog-blogShow1](http://7q5cdt.com1.z0.glb.clouddn.com/blog-blogShow1.gif)
-
-![blog-blogShow2](http://7q5cdt.com1.z0.glb.clouddn.com/blog-blogShow2.gif)
-
-## Attention
-
-When you use this theme. Please make sure to add the author's info, like this: Jekyll theme by [Gaohaoyang](https://github.com/Gaohaoyang) or Designed by [Gaohaoyang](https://github.com/Gaohaoyang) 
-
-While you should delete statistics code in _includes/head.html.
-
-like this:
-
-```javascript
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?**************************";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-```
-
-And you should change the duoshuo comment code in _layouts/default.html.
-
-like this:
-
-```javascript
-var duoshuoQuery = {short_name:"******"};
-    (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
-})(); 
-``` 
-
----
-
-Thank you.
-Here is my blog: [HyG](http://gaohaoyang.github.io)
-
----
-
-LICENSE
-
-[MIT License](https://github.com/Gaohaoyang/gaohaoyang.github.io/blob/master/LICENSE.md)
+<hr/>
 
 
+## Features
+
+### Collections
+This Jekyll theme implements collections to let you break up your work into categories. The example is divided into poetry and portfolio, but easily revamp this into recipes, apps, short stories, limmericks, whatever your creative work is. 
+> To do this, edit the collections in the config file, create a corresponding folder, and update the portfolio and poetry source files. 
+
+Three different layouts are included—the poetry layout, for a simple list of entries, the blog layout (index.html), for more detailed descriptive list of entries, and the portfolio layout. The portfolio layout overlays a descriptive hoverover on a background image. If no image is provided, the square is auto-filled with the chosen theme color. Thumbnail sizing is not necessary, as the grid crops images perfectly. 
+
+### Portfolio Specifics
+You can easily add full pages for each of the projects in your portfolio. If you want one to link to an external website, create a file for it in _portfolio, and  fil in the YAML front matter as you would for another, but with a redirect, like so: 
+
+	---
+	layout: post
+	title: Project
+	description: a project that redirects to another website
+	img:
+	redirect: https://otherpage.com
+	--- 
+
+### Theming
+Six beautiful theme colors have been selected to choose from. The default is red, but quickly change it by editing the _base.scss file in line 40. The color variable are listed there, as well. 
+
+### Photos
+Photo formatting is made simple using rows of a 3-column system. Make photos 1/3, 2/3, or full width. Easily create beautiful grids within your blog posts and projects pages. 
+
+### Code Highlighting
+This theme implements Jekyll's built in code syntax highlighting with Pygments. Just use a liquid tag to delineate your code: 
+{% highlight python %}
+	code code code
+{% endhighlight %}
+
+
+<hr/>
+The MIT License (MIT)
+Copyright (c) 2015 Lia Bogoev
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
