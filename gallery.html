@@ -1,0 +1,11 @@
+---
+layout: default
+title: Gallery
+slug: home
+---
+
+<div class="post-list">
+	{% for project in site.gallery %}
+	  {% include gallery.html %}
+	{% endfor %}
+</div>
