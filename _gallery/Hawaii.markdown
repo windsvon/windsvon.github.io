@@ -2,7 +2,7 @@
 layout: post
 title: 夏威夷风情
 description: 圣诞节的夏威夷
-img: http://i13.tietuku.com/fe76e051c3700c60s.jpg
+img: http://i3.piimg.com/fe76e051c3700c60s.jpg
 ---
 <br>
 
