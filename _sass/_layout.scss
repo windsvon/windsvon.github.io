@@ -227,7 +227,7 @@
     }
 
     .post-content {
-      margin-top: .8em;
+      margin-top: 0.8em;
 
     }
   }
@@ -462,4 +462,14 @@ color: $caption_color;
 text-align: center;
 vertical-align: middle;
 font-size: $caption_font_size;
+}
+
+/** 
+ * Post pages **********************************************************
+*/
+
+.post {
+  .post-content {
+    margin-top: 30px;
+  }
 }
