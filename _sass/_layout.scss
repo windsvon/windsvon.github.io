@@ -343,7 +343,7 @@
 
       &:hover {
         background: $primary-color;
-        border: none;
+        border: 1px solid $primary-color;
         color: #fff;
       }
     }

@@ -1,0 +1,35 @@
+---
+layout: post
+title:  "Nginx常用命令"
+date:   2016-05-18 05:45:08
+categories: 基础
+comments: true
+---
+
+<br>
+
+**Nginx所在目录：**
+
+`cd /usr/local/sbin/`
+
+**修改配置后重启：**
+
+`./nginx -s reload `
+
+**重新打开日志文件：**
+
+`./nginx -s reopen `
+
+**关闭Nginx：**
+
+`./nginx -s stop `
+
+or
+
+`./nginx -s quit `
+
+
+
+
+
+
