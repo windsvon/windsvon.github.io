@@ -4,7 +4,6 @@ title:      "使用CSS实现照片边缘模糊效果"
 date:       2016-10-10
 author:     "Yu"
 header-mask: 0.6
-catalog: true
 tags:
     - CSS
 ---
