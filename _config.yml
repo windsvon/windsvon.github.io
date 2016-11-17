@@ -68,7 +68,7 @@ duoshuo_share: true                     # set to false if you want to use Commen
 # Sidebar settings
 sidebar: true                       # whether or not using Sidebar.
 sidebar-about-description: "路在脚下"
-sidebar-avatar: /img/portrait.png      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: http://ogenq9ut1.bkt.clouddn.com/public/16-11-17/27791049.jpg     # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 

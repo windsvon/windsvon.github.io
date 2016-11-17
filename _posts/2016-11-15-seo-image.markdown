@@ -1,0 +1,209 @@
+---
+layout:     post
+title:      "搜索引擎优化（SEO）技巧小结"
+date:       2016-11-15
+author:     "Yu"
+header-mask: 0.6
+catalog: true
+tags:
+    - 前端优化
+    - 翻译
+---
+
+关于搜索引擎优化的方法一直众说纷纭，不同搜索引擎，不同国家的优化方法可能也不尽相同，本文总结了一些国外的搜索引擎优化方法，可操作性还是比较强的，权当参考。
+
+## 可索引的内容
+
+想要是页面更好地被搜索引擎识别，重要的内容应该放在HTML的文字标签中。虽然网络爬虫技术已经有了很大的发展，但是FLASH文件，Java小程序以及非文字内容还是通常会被搜索引擎爬虫所忽略。不过以下策略可以提高非文字内容的可爬取性：
+
+* 利用`alt`为图片添加文字说明
+* 为搜索框添加导航以及可爬取的链接
+* 在页面上为FLASH以及JAVA插件添加文字说明
+* 为音频视频内容提供文稿
+
+## 可爬取的链接结构
+
+在搜索引擎爬取页面内容建立索引之前，它需要先通过搜索链接来找到这个页面。一个可爬取的链接结构对于爬虫找到网站的所有页面是很关键的。大量的站点由于链接不可爬取导致很多页面无法被搜索引擎索引。下面就是一个典型的问题站点。
+
+![不可爬取的链接结构](http://upload-images.jianshu.io/upload_images/3623238-e141a40958f3f33c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+这个例子中，搜索引擎永远无法找到页面C和D，因为没有直接的、可爬取的链接指向这两个页面。如果搜索引擎甚至无法找到一个页面，那么不管内容多好、关键词多精准，爬虫也无法到达这个页面。
+
+以下是搜索引擎无法到达页面的几种常见情况：
+
+* 需要提交表单后才能显示的页面
+* 使用Javascript生成的链接
+* 指向被[Meta Robots tag或者robots.txt](https://moz.com/learn/seo/robotstxt)阻止的页面的链接
+* Frames或者iframes
+* 一些开发者认为只要在一个站点放置搜索框，搜索引擎就能够找到站点的所有内容。事实上爬虫不会使用页面搜索功能来寻找内容
+* 放置在FLASH, JAVA或其他插件中的链接
+* 对于包含成百上千个链接的页面，搜索引擎可能无法爬取所有的链接
+* 添加`rel="nofollow`的链接会被搜索引擎忽略，但是Moz的[搜索引擎排名因素](http://moz.com/search-ranking-factors)显示`nofollow`链接占比较高的页面的搜索排名较高
+```html
+<a href="http://www.wpax.com" rel="nofollow">Wpax</a>
+```
+
+## 关键词的选取和使用
+
+关键词是搜索过程中最基本的因素。搜索引擎通过关键词搜索并索引页面，而不是将几百亿个网页全部保存在数据库中。
+
+早期的搜索引擎完全通过关键词来搜索页面，而并不关心这些关键词是如何使用的。近年来随着机器学习的发展，搜索引擎已经可以识别出有效使用的关键词，虽然还不能完全做到和人类一样阅读和理解。
+
+因此使用关键词时应尽量做到自然而有效。如果页面指向的关键词是“天安门”，那么你应该在页面中包含关于天安门的内容，例如天安门的历史，天安门周边的建筑等等。如果你仅仅将“天安门”这个词语散布在页面各处，而不包含与其相关的内容，那么不会对搜索引擎排名有太大的帮助。
+
+### 关键词的使用指南
+
+以下一些策略可以提高关键词的使用效率：
+
+* 在`title`标签中至少使用一次，并且使关键词在`title`标签中尽量靠前
+* 在靠近页面顶端处使用一次
+* 在正文中至少出现两到三次，如果文字内容很多，需要出现更多次
+* 在图片的`alt`属性中至少使用一次
+* 在URL中使用一次
+* 在meta description标签中至少使用一次
+* 不要将关键词用在指向其他页面的链接中
+
+## Title标签
+
+页面的`title`标签中包含的应该是对页面的精确而简短的描述，它在用户体验以及搜索引擎优化中都很关键。在搜索引擎优化中，对`title`标签的优化是最简单也是最有效的，以下是一些优化建议：
+
+* **注意标题长度**
+
+  搜索引擎只显示`title`标签中的前65-75个字符，因此最好将标题长度控制在这个范围内，  不过如果页面要指向多个关键词且关键词长度较长的话，还是要保证所有的关键词都出现在标题中，这对于搜索排名很重要。
+
+* **将重要的关键词放在前面**
+  
+  关键词越靠前，在搜索中的权重越大，搜索排名越靠前
+
+* **包含品牌名**
+
+* **考虑标题的可读性以及表达效果**
+
+  标题是访问者对于页面的最初印象，一个好的标题能够传达积极的印象从而吸引更多的访问者，要知道搜索引擎优化不仅包括关键词选取策略及优化，也会考虑整体用户体验。
+
+## Meta标签
+
+Meta标签的最初目的是作为关于网站内容信息的映射。以下是几种基本的meta标签及其使用方法：
+
+### *Meta Robots*
+
+**Meta Robots**标签可以用来控制搜索引擎爬虫的行为:
+
+```html
+<html>
+<head>
+<title>...</title>
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+</head>
+```
+这个标签支持的行为有：
+
+* **index/noindex** -- 控制页面是否可以被搜索引擎爬取，并且保存在引擎的索引中，默认为index（可索引）
+* **follow/nofollow** -- 控制页面中的链接是否可以被搜索引擎爬取，默认为follow
+* **noarchive** -- 禁止搜索引擎缓存页面
+* **nosnippet** -- 避免搜索引擎在搜索结果中的标题和URL后显示描述文字
+* **noodp/noydir** -- 避免搜索引擎从Open Directory Project(DMOZ)或 Yahoo! Directory中抓取并显示网页描述
+
+在HTTP头部使用[X-Robots-Tag](http://code.google.com/web/controlcrawlindex/docs/robots_meta_tag.html)可以实现同样效果，而且更适用于非HTML文件，例如图片
+
+## *Meta Description*
+
+```html
+<head>
+<meta name="description" content="This is an example of a meta description. This will often show up in search results.">
+</head>
+```
+`meta description`标签中的内容是对页面内容的简短描述。搜索引擎不通过这个标签中的关键词进行排名，但是搜索结果中的网页描述主要来自于这个标签中的内容
+
+![meta description](http://upload-images.jianshu.io/upload_images/3623238-d70e25a5ef3f32da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+一个好的meta description可以使读者在很多搜索结果中选择你的网站从而提高点击率。
+
+meta description可以是任意长度，但是搜索引擎一般最多显示160个字符，因此最好将标签内容控制在这个长度内。如果没有meta description，搜索引擎会从页面的其他元素中抓取并生成搜索结果说明。
+
+
+## URL 结构
+
+URL在搜索中占有很大的权重， 由于其会被显示在搜索结果中，因此会影响显示效果以及用户的点击欲望。URL也会影响搜索结果排名，在URL中恰当使用关键词可以获得排名优势。
+
+### URL创建指南
+
+* **使URL更具有描述性**
+
+  站在用户的角度考虑，当你看到你的URL地址时能否才到页面的大致内容，如果可以，说明URL具有良好的描述性
+
+* **越短越好**
+
+  虽然URL的描述性很重要，但是也不要使URL过长，这样URL不仅更方便引用，也可以在搜索结果中完整显示。
+
+* **关键词的使用很重要（但是过度使用很危险）**
+
+  如果页面指向一个特定的关键词，那么确保它被包含在URL中，但是不要在URL中包含多个关键词。
+
+* **静态化**
+
+  好的URL是用户可读懂的，不包含很多参数，数字和符号。使用Apache的mode_rewrite和Microsoft的ISAPI_rewrite可以将动态URL转为静态，例如`http://www.wpax.cn/blog?id=123`转为更可读的静态链接`http://www.wpax.cn/blog/get-started`
+
+* **使用`-`来分割单词**
+ 
+ 其他的分隔符例如`_`， `+`， `%20`(空格)的通用性并不好
+  
+## 权威内容和重复内容
+
+搜索引擎对于内容单薄以及内容重复的页面会有搜索排名惩罚。在现代的内容管理系统中经常会出现一个页面有多个重复的版本的情况，例如一个正常版本，一个打印版本，这些不同的版本具有不同的URL地址。对于浏览器而言，如何确定显示哪个版本的页面呢？
+
+* **方法一：301-redirect**
+  使用[301-redirect](https://moz.com/learn/seo/redirection)可以使相同内容的页面共享一个URL地址，并提高搜索排名。
+
+* **方法二：Canonical Tag**
+
+  使用`rel=canonical`也可以使多个重复内容的页面指向一个权威的URL地址：
+
+  ```html
+  <link rel="canonical" href="http://www.wpax.cn/blog"/>
+  ```
+  这个标签的意思是这个页面可以视为`http://www.wpax.cn/blog`的一个镜像，所有对当前页    面的搜索都会被定向到`http://www.wpax.cn/blog`
+
+  从搜索引擎优化的角度来讲，**Canonical Tag**的的作用和**301-redirect**的作用很相似，本质上来讲就是将几个不同的页面看作一个，但是前者不需要使访问者跳转到新的URL。
+
+## 搜索结果的富摘要（Rich Snippets）
+
+通过使用**rich snippets**可以使搜索结果中展示更多的页面信息，虽然使用富摘要不能提高搜索排名，但是更丰富的搜索结果可以吸引用户的点击。可以利用[microdata](https://en.wikipedia.org/wiki/Microdata_(HTML))生成富摘要。
+
+## 保护你的站点
+
+一些流氓网站可能会盗用你的网站内容从而影响你的网站在搜索引擎中的排名。
+
+**解决方法**
+
+* 由于流氓网站一般会原样照搬你的网站内容，可以在网站中加入链接来指回你的网站地址。因此网页中的链接尽量使用绝对地址而不是相对地址。例如指向主页的链接：
+不要使用：
+```html
+<a href="../">Home</a>
+```
+使用：
+```html
+<a href="http://www.wpax.cn">Home</a>
+```
+
+* （百度有效性存疑）
+When you publish content in any type of feed format, such as RSS
+or XML, make sure to ping the major blogging and tracking
+services (Google, Technorati, Yahoo!, etc.). You can find
+instructions for pinging services like Google and Technorati directly
+from their sites, or use a service like Pingomatic to automate the
+process. If your publishing software is custom-built, it's typically
+wise for the developer(s) to include auto-pinging upon publishing.
+	
+
+
+
+
+
+
+
+
+
+
+
+
