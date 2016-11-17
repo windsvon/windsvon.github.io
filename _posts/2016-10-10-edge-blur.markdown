@@ -1,0 +1,54 @@
+---
+layout:     post
+title:      "使用CSS实现照片边缘模糊效果"
+date:       2016-10-10
+author:     "Yu"
+header-mask: 0.6
+catalog: true
+tags:
+    - CSS
+---
+
+在网页设计中经常会用到边缘模糊的照片，这类照片由于边缘演变渐变，在压缩时很容易出现边缘锯齿化的问题，因此不得不采用较高质量的图片，导致网页体积的增大。事实上，使用CSS3的新特性可以很容易实现各种图片边缘的模糊效果。
+
+首先，需要在图片标签外部套一层DIV标签：
+
+```html
+<div class="cover">
+  <img src="photo.png" alt="photo">
+</div>
+```
+
+然后只需要为外层DIV添加一圈向内的边缘阴影，以模拟图片边缘模糊效果，CSS样式如下：
+
+```css
+.cover {
+    width: 180px;
+    height: 180px;
+    position: relative;
+}
+.cover:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    box-shadow:0 0 50px 30px #ffffff inset;
+}
+img{
+    width: 180px;
+    height: 180px;
+    display: block;
+    margin-bottom: 20px;
+}
+```
+注意直接为外层DIV添加边缘阴影是看不到效果的，因为阴影会被图片遮住，必须通过一个绝对定位的伪元素添加阴影。最终效果如下：
+
+![边缘模糊效果](http://upload-images.jianshu.io/upload_images/3623238-d023a7d66ae0148d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+
+
+
+
