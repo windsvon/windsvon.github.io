@@ -30,7 +30,7 @@ p {
 
 ![同级元素外边距塌陷](http://upload-images.jianshu.io/upload_images/3623238-03bb73a5fea4fce2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-## 父子元素间的边距塌陷
+## 父子元素
 
 如果块级父元素中，不存在**border, padding, 行内元素以及清除浮动**这四条属性（对于border和padding，也可以说，当上border及上padding宽度为0时），那么这个块级元素和其第一个子元素的**上外边距（margin-top）**就可以说”挨到了一起“。此时这个块级父元素和其第一个子元素就会发生 **上外边距塌陷** 现象，换句话说，此时这个父元素对外展现出来的外边距将直接变成这个父元素和其第一个子元素的margin-top的较大者。
 
