@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "前端布局之外边距塌陷问题"
+title:      "前端布局中的外边距塌陷问题"
 date:       2016-10-11
 author:     "Yu"
 header-mask: 0.6
