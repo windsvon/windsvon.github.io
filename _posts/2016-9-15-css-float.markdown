@@ -105,7 +105,7 @@ tags:
 	顾名思义，就是在需要清除浮动的位置放置一个空的div。
 	
 ```html
-	<div style="clear:both;"></div>
+<div style="clear:both;"></div>
 ```
 
 * **设置overflow**
@@ -117,13 +117,13 @@ tags:
 	利用伪类`:after`可以实现清除浮动的目的，只需要为容器添加一个类，如"clearfix"，然后定义如下css样式：
 	
 ```css
-	.clearfix:after { 
-	    content: "";
-	    visibility: hidden;
-	    display: block;
-	    height: 0;
-	    clear: both
-	}
+.clearfix:after { 
+    content: "";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both
+}
 ```
 
 举个例子说明，例如以下一组色块：
