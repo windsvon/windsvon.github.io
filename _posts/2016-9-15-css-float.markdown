@@ -103,7 +103,8 @@ tags:
 * **使用空的DIV元素**
 
 	顾名思义，就是在需要清除浮动的位置放置一个空的div。
-```html
+	
+ ```html
 <div style="clear:both;"></div>
 ```
 
@@ -114,7 +115,8 @@ tags:
 * **利用伪类`:after`**
 
 	利用伪类`:after`可以实现清除浮动的目的，只需要为容器添加一个类，如"clearfix"，然后定义如下css样式：
-```css
+	
+ ```css
 .clearfix:after { 
     content: "";
     visibility: hidden;
