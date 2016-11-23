@@ -33,12 +33,10 @@ tags:
 与之相对，绝对定位元素完全脱离了页面的文档流和文本流，类似传统印刷中忽略文字环绕的情况。绝对定位的元素不会影响其他元素的位置也不会受其他元素的影响。下面是一个浮动前后对比的例子：
 
 **图 | 浮动前：**
-
 ![浮动前](http://upload-images.jianshu.io/upload_images/3623238-d1d8c6abbbe79bac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 **图 | 浮动后：**
-
 ![浮动后](http://upload-images.jianshu.io/upload_images/3623238-fcd01d10bee81eab.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 **浮动的框可以向左或向右移动，直到它的外边缘碰到包含框或另一个浮动框的边框为止。**
@@ -70,7 +68,6 @@ tags:
 当应用于浮动元素时，它将元素的**外边界**移动到所有相关浮动元素**外边界**的下方。这会影响后面浮动元素的布局，后面的浮动元素的位置无法高于它之前的元素。
 
 **图 | 清除浮动前**
-
 ![清除浮动前](http://upload-images.jianshu.io/upload_images/3623238-c47ba19c139cf9c0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
@@ -78,13 +75,12 @@ tags:
 
 
 **图 | 清除浮动后**
-
 ![清除浮动后](http://upload-images.jianshu.io/upload_images/3623238-cadfe33dbb01011e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 这里为footer设置的是`clear: both`，`clear`属性有四个可能的参数，最常用的就是`both`，会清除两个方向的浮动。使用`left` 和 `right`可以清除相应方向上的浮动。`none` 是默认值，`inherit`表示该元素继承其父元素的`clear`属性的值。
 
 
-## 容器的塌陷问题。
+## 容器的塌陷问题
 
 使用浮动时遇到的一个很棘手的问题是浮动对容器的影响。如果容器内除了浮动元素外没有其他元素，那么它的高度就会塌陷为0。如果父元素背景透明的话，这种塌陷并不容易被觉察到，如下所示：
 
@@ -133,7 +129,6 @@ tags:
 举个例子说明，例如以下一组色块：
 
 **图 | 清除浮动前**
-
 ![清除浮动前](http://upload-images.jianshu.io/upload_images/3623238-f54618f13e5ede65.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 如果想实现每一行一种颜色的效果，有两种策略：
@@ -145,7 +140,6 @@ tags:
 最后的效果如下：
 
 **图 | 清除浮动后**
-
 ![清除浮动后](http://upload-images.jianshu.io/upload_images/3623238-83159e4553414718.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## 参考文献
