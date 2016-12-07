@@ -1,0 +1,106 @@
+---
+layout:     post
+title:      "理解Javascript中的this关键词"
+date:       2016-08-15
+author:     "Yu"
+header-mask: 0.6
+catalog: true
+tags:
+    - Javascript
+---
+
+初学Javascript经常会对其中的`this`关键词感到困惑，这篇文章总结了`this`在几种常见情景下的作用机制。
+
+## 全局作用域
+
+在所有的Javascript运行环境中都会包含一个**全局对象**，它包含了一些内置的对象例如`Math`和`String`。在浏览器中，全局对象是`window`对象。
+
+在全局作用域中执行的代码中的`this`永远指向全局对象。那么，当执行上下文改变时，`this`的指向将如何改变呢？在下面三种情况下，`this`关键词的指向会改变：
+
+## 方法调用
+
+当函数作为对象中的方法调用时，`this`指向包含这个方法的对象，例如
+
+```js
+var counter = {
+  val: 0,
+  increment: function () {
+    this.val += 1;
+  }
+};
+
+counter.increment();
+console.log(counter.val); // 1
+counter['increment'] ();
+console.log(counter.val); // 2
+```
+
+注意这个规则只适用于当函数作为对象方法调用时起作用，当函数单独调用时，`this`不再指向包含这个方法的对象。接着上面这个例子
+
+```js
+var inc = counter.increment;
+inc();
+console.log(counter.val); // 2, (没有发生变化)
+console.log(val) // NaN
+```
+
+在这里，当inc()调用时，`this`指向的是全局对象，即`window`，而此时`window.val`是`undefined`。因此`window.val += 1`的值是`NaN`。
+
+## 构造函数
+
+当Javascript的函数通过关键词`new`调用时，可以作为构造函数，用以产生一个新的对象。这时`this`指向新创建的对象。
+
+```js
+function Person (name) {
+  this.name = name;
+}
+
+var newPerson = new Person('Mike');
+
+console.log(newPerson.name); // Mike
+console.log(name); // ReferenceError
+```
+
+注意这个例子中的函数`Person`也可以作为普通函数调用，这时`this`会指向全局对象。
+
+```js
+var person = Person('Mike');
+console.log(person.name); // undefined
+console.log(name); // Mike
+```
+
+上面这个例子中，由于没有创建新的对象，`this`仍然指向全局对象`window`，相当于执行了`window.name = 'Mike'`。
+
+
+## 使用call和apply
+
+所有的Javascript函数都包含两个方法，`call` 和 `apply`。这两个方法可以让你调用函数并设定`this`的指向。这两个方法接受的第一个参数是`this`的指向目标。
+
+```js
+var add = function (x, y) {
+  this.val  = x + y
+}
+
+var obj = {
+  var: 0
+}
+
+add.apply(obj, [2, 8]);
+// or
+add.call(obj, 2, 8);
+console.log(obj.val); // 10
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+

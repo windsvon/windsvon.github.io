@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "理解Javascript闭包"
-date:       2016-10-15
+date:       2016-08-18
 author:     "Yu"
 header-mask: 0.6
 catalog: true
